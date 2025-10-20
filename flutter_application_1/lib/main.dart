@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MainApp());
 }
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -11,56 +10,58 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+    title: Text('ПРОДАЖА УСЛУГ'),
+    centerTitle: true,
+       ),
         floatingActionButton: FloatingActionButton(
         onPressed: null,
         backgroundColor: Colors.grey[300],
         ),
         body: Column(children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-                Container(child: Text('олег')),
-                Container(child: Text('и')),
-                Container(child: Text('вовка')),
-            ], 
-          )    ,
-              Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-                Container(child: Text('олег'), color: Colors.red,),
-                Container(child: Text('и')),
-                Container(child: Text('вовка'),color: const Color.fromARGB(255, 54, 222, 244),),
-            ], 
-          ),  
-          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-                Container(child: Text('олег')),
-                Container(child: Text('и')),
-                Container(child: Text('вовка')),
+                Container(child: Text('ДОСТАВКА')),
+                Container(child: Text('ХРАНЕНИЕ')),
+                Container(child: Text('СКУПКА')),
             ], 
           ) ,
            Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CircleAvatar(
-                radius: 50,
-                backgroundColor: Colors.blue,
-               backgroundImage: NetworkImage('https://example.com/your_image.png'), 
-              ),
-              FloatingActionButton(onPressed: () {print('1223');}, child:
-              Text(
-                "Привет", style:
+              FloatingActionButton.large(onPressed: () {},
+              
+              child:
+                 Text(
+                "Перейти", style:
                 TextStyle(
-                  color: const Color.fromARGB(255, 2, 161, 240)
+                  color: const Color.fromARGB(255, 0, 0, 0)
                 ),
               )),
-                FloatingActionButton(onPressed: () {print('1223');}, child:
-                Text(
-                  "Пока", style:
-                  TextStyle(color: Colors.lightGreenAccent) ,
+              FloatingActionButton(
+                isExtended:true,
+                onPressed: () {print('1223');}, child:
+              Text(
+                "Перейти", style:
+                TextStyle(
+                  color: const Color.fromARGB(255, 0, 0, 0)
                 ),
-              ) ,
+              )),
+              FloatingActionButton(onPressed: () {print('1223');}, child:
+              Text(
+                "Перейти", style:
+                TextStyle(
+                  color: const Color.fromARGB(255, 0, 0, 0)
+                ),
+              )),
+              FloatingActionButton(onPressed: () {print('1223');}, child:
+              Text(
+                "Перейти", style:
+                TextStyle(
+                  color: const Color.fromARGB(255, 0, 0, 0)
+                ),
+              )),
             ],
           )
         ]),
