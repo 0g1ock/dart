@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class HranenieScreen extends StatelessWidget {
-  const HranenieScreen({super.key});
+class ProdajaScreen extends StatelessWidget {
+  const ProdajaScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Хранение'),
+        title: const Text('продажа'),
       ),
       body: const Center(
-        child: Text('Экран хранения'),
+        child: Text('Экран продажи'),
       ),
     );
   }

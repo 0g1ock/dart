@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dostavka_Screen.dart';
-import 'hranenie_Screen.dart';
+import 'prodaja_Screen.dart';
 import 'skupka_Screen.dart';
 
 
@@ -13,10 +13,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.cyan,
+      backgroundColor: const Color.fromARGB(255, 209, 209, 209),
         appBar: AppBar(
-      backgroundColor: Colors.cyan,
-    title: Text('ПРОДАЖА УСЛУГ'),
+      backgroundColor: const Color.fromARGB(255, 187, 90, 216),
+    title: Text('TraidCompany - "Гарантия качества во всех операциях"'),
     centerTitle: true,
        ),
         floatingActionButton: FloatingActionButton(
@@ -68,11 +68,11 @@ class MainApp extends StatelessWidget {
                  Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (context) => HranenieScreen(), // Передача счетчика как параметра
+                    builder: (context) => ProdajaScreen(), // Передача счетчика как параметра
                   ),
                 );
             },
-            child: Text('Хранение', style: TextStyle(color: Colors.black),),
+            child: Text('Продажа', style: TextStyle(color: Colors.black),),
           ),
         ),
       ],
@@ -81,7 +81,7 @@ class MainApp extends StatelessWidget {
       children: [
         Container(
           child: Icon(
-  Icons.attach_money, // Иконка доставки
+  Icons.computer, // Иконка продажи
   color: const Color.fromARGB(255, 0, 0, 0),
   size: 40.0,
 ),
