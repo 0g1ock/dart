@@ -10,20 +10,20 @@ class SkupkaScreen extends StatelessWidget {
         title: const Text('Скупка'),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2,
+        currentIndex: 0,
        // onTap: onBottomNavItemTap,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.delivery_dining),
+            label: 'доставка',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: 'Courses',
+            icon: Icon(Icons.archive),
+            label: 'продажа',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.contact_mail),
-            label: 'Mail',
+            icon: Icon(Icons.computer),
+            label: 'скупка',
           ),
         ],
       ),
