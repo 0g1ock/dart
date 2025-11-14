@@ -29,7 +29,7 @@ class _MainAppState extends State<MainApp> {
     if (index == 1) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ProdajaScreen()),
+        MaterialPageRoute(builder: (c) { return ProdajaScreen(); }),
       );
     }
 
@@ -44,19 +44,12 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 209, 209, 209),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 210, 179, 219),
         title: Text('TraidCompany'),
         centerTitle: true,
       ),
-      body: Center(child:  DropdownButton(
-        value: true,
-        onChanged: (k) {},
-        items: [    DropdownMenuItem (child: Text('da'),value:true ), 
-                    DropdownMenuItem (child: Text('net'),value:false)       
-         ],
-      )),
       bottomNavigationBar:
       BottomNavigationBar(
         currentIndex: currentIndex,
@@ -71,7 +64,7 @@ class _MainAppState extends State<MainApp> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: null,
+        onPressed: () {     print("click");    }  ,
         backgroundColor: Colors.grey[300],
       ),
     );
